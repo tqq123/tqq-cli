@@ -15,3 +15,4 @@ npm start
 npm run build
 
 ## 默认是scss预处理器，大家可以根据需要修改
+## 4.16更新。添加了babel，可以愉快地编写es6
