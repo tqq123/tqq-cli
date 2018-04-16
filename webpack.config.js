@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = env => {
   if (!env) {
@@ -34,13 +34,17 @@ module.exports = env => {
     devServer: {
       contentBase: path.join(__dirname, 'dist'),
       compress: true,
-      port: 9000
+      port: 9000,
     },
     module: {
       rules: [
         {
           test: /\.html$/,
           use: 'html-loader'
+        },
+        {
+          test: /\.js$/,
+          use: "babel-loader"
         },
         {
           test: /\.(js|vue)$/,
@@ -81,6 +85,18 @@ module.exports = env => {
         {
           test: /\.scss$/,
           use: 'style-loader!css-loader!sass-loader'
+        },
+        {
+          test: /\.(gif|jpg|jpeg|png|svg)$/,
+          use: [
+            {
+              loader: 'url-loader',
+              options: {
+                limit: 1024,
+                name: '[name].[ext]'
+              }
+            }
+          ]
         }
       ]
     },

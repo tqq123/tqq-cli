@@ -7,7 +7,8 @@
 </template>
 
 <script>
-  var a = 0;
+  const tqq = 0;
+  console.log(tqq)
   export default {
 
   }
