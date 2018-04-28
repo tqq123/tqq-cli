@@ -65,11 +65,11 @@ module.exports = env => {
               options: {
                 loaders: env.production ? {
                   css: ExtractTextPlugin.extract({
-                    use: 'css-loader?minimize!px2rem-loader?remUnit=75&remPrecision=8',
+                    use: 'css-loader?minimize!px2rem-loader?remUnit=40&remPrecision=8',
                     fallback: 'vue-style-loader' 
                   }),
                   scss: ExtractTextPlugin.extract({
-                    use: 'css-loader?minimize!px2rem-loader?remUnit=75&remPrecision=8!sass-loader',
+                    use: 'css-loader?minimize!px2rem-loader?remUnit=40&remPrecision=8!sass-loader',
                     fallback: 'vue-style-loader' 
                   })
                 }
