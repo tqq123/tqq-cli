@@ -20,7 +20,4 @@ npm run build
 
 
 # 关于移动端适配
-这里我们使用hotcss, 我默认是以iphone5的320宽度，
-大家启动项目视口大小切到iphone5可以看html根元素为40px,所以我们就设px2rem基准为40px,
-webpack.config.js里默认css-loader配置remUnit=40即可，
-如果为iphone6或者plus方法同上。
+这里我们使用hotcss, 我默认是以iphone5的320宽度，大家启动项目视口大小切到iphone5可以看html根元素为40px,所以我们就设px2rem基准为40px,webpack.config.js里默认css-loader配置remUnit=40即可，如果为iphone6或者plus方法同上。
